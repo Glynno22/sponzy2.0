@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ClientController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +14,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/*
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/hello', function ()  {
-    return view('choix');
-});
+Route::get('/choix', function ()  {
+    return view('/client/choix');
+});*/
+
+route::get("/choix", [ClientController::class, "choix"]);
+
+route::get("/register", [ClientController::class, "register"]);
+
+route::get("/", [ClientController::class, "end"]);
