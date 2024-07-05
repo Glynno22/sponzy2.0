@@ -25,6 +25,8 @@ Route::get('/choix', function ()  {
 
 route::get("/choix", [ClientController::class, "choix"]);
 
-route::get("/register", [ClientController::class, "register"]);
+route::get("/registration", [ClientController::class, "register"]);
 
 route::get("/", [ClientController::class, "end"]);
+
+route::get("/compte", [ClientController::class, "compte"]);

@@ -3,9 +3,10 @@
     @section('title')
         Choix
     @endsection
+
     @section('content')
 
-    <div class="m-5">
+    <section class="m-5">
         <div class="flex justify-center my-4">
             <img class="w-96 md:text-center" src="assets/log.png" alt="cfdf">
         </div>
@@ -26,6 +27,6 @@
         <div class="flex justify-center my-2">
             <button class="bg-black text-white p-2 text-xl font-bold  rounded-full w-80">Créer un compte</button>
         </div>
-    </div>
+    </section>
 
     @endsection

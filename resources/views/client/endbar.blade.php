@@ -1,13 +1,13 @@
 @extends('client.master')
 
     @section('title')
-        Register
+        EndBar
     @endsection
     @section('content')
     <style>
 
     </style>
-<div class="relative">
+<section class="relative">
         <div class="flex justify-around bg-white pt-2 pb-2  fixed bottom-0 left-0 pl-1">
             
             <div class="text-center ml-4 mr-5 ">
@@ -36,7 +36,7 @@
             </div>
         </div>
 
-</div>
+</section>
 
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga repellendus quos ratione ex deserunt reprehenderit esse eveniet laudantium sequi molestiae? Voluptatibus, doloribus amet deleniti itaque dolores provident et labore facilis.

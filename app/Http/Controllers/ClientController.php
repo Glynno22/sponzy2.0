@@ -17,4 +17,8 @@ class ClientController extends Controller
     public function end(){
         return view("client.endbar");
     }
+
+    public function compte(){
+        return view("client.compte");
+    }
 }
