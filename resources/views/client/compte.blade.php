@@ -10,11 +10,11 @@
 
     @section('content')
 
-        <section class="mb-24">
+        <section class="mb-24 mt-14">
 
-            <div class="flex justify-around items-center mt-10">
+            <div class="flex justify-around items-center">
                 <i class="fa-solid fa-arrow-left text-white border-white border-2 rounded-full p-1"></i>
-                <p class="text-2xl font-bold text-white "><span class="border">COMPTE</span></p>
+                <p class="text-2xl font-bold text-white "><span class="stroke-2">COMPTE</span></p>
                 <i class="fa-solid fa-user-gear text-white"></i>
             </div>
 
