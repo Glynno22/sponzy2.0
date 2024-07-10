@@ -26,16 +26,43 @@
             </div>
         </div>
 
+        @if (count($errors) >0)
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <div class="alert alert-danger">
+                        
+                            <li>
+                                {{$error}}
+                            </li>
+                        
+                        </div>
+                    @endforeach
+                </ul>
+            @endif
+            @if (Session::has('erreur'))
+                
+                <div class="alert alert-danger">
+                 {{Session::get('erreur')}}
+                </div>
+            @endif
+            @if (Session::has('status'))
+                
+                <div class="alert alert-success">
+                {{Session::get('status')}}
+                </div>
+            @endif
+
         <div class="form flex justify-center">
-            <form action="#" method="POST" class="md:w-6/12" >
+            <form action="{{url('/register/createUser')}}" method="POST" class="md:w-6/12" >
+                @csrf
                 <div class="flex justify-center ">
-                    <input type="text" name="" placeholder="Nom" class="hover:fielsed placeholder:text-md outline-none border-b-2 border-black p-2 text-lg font-medium w-full">
+                    <input type="text" name="nom" placeholder="Nom" class="hover:fielsed placeholder:text-md outline-none border-b-2 border-black p-2 text-lg font-medium w-full">
                 </div>
                 <div class="flex justify-center mt-3 ">
-                    <input type="text" name="" placeholder="Téléphone" class="placeholder:text-md outline-none border-b-2 border-black p-2 text-lg font-medium w-full">
+                    <input type="text" name="telephone" placeholder="Téléphone" class="placeholder:text-md outline-none border-b-2 border-black p-2 text-lg font-medium w-full">
                 </div>
                 <div class="flex justify-center mt-3 ">
-                    <input id="password" type="password" name="" placeholder="Mot de passe" class="placeholder:text-md outline-none border-b-2 border-black p-2 text-lg font-medium w-full">
+                    <input id="password" type="password" name="motpass" placeholder="Mot de passe" class="placeholder:text-md outline-none border-b-2 border-black p-2 text-lg font-medium w-full">
                     <span class="border-b-2 border-black" onclick="togglePassword()">
                         
                         <i id="toggle-icon" class="fa-solid fa-eye  mt-4"></i>
@@ -44,7 +71,7 @@
                 </div>
                 <p class="text-gray-300 text-sm font-bold mt-2">Minimun 6 caratères</p>
                 <div class="flex justify-center mt-2 ">
-                    <input id="password1" type="password" name="" placeholder="Confirmer mot de passe" class="placeholder:text-md outline-none border-b-2 border-black p-2 text-lg font-medium  w-full">
+                    <input id="password1" type="password" name="motpassconfirme" placeholder="Confirmer mot de passe" class="placeholder:text-md outline-none border-b-2 border-black p-2 text-lg font-medium  w-full">
                     <span class="border-b-2 border-black" onclick="togglePassword1()">
                         
                         <i id="toggle-icon1" class="fa-solid fa-eye  mt-4"></i>
@@ -52,7 +79,7 @@
                     </span>
                 </div>
                 <div class="flex justify-center mt-2 ">
-                    <input type="number" name="number" placeholder="Code parainage" class="placeholder:text-md outline-none border-b-2 border-black p-2 text-lg font-medium  w-full">
+                    <input type="number" name="codeparain" placeholder="Code parainage" class="placeholder:text-md outline-none border-b-2 border-black p-2 text-lg font-medium  w-full">
                 </div>
                 <div class="flex justify-center mt-5 ">
                     <button class="bg-black text-white p-2 text-xl font-bold  rounded-full w-full">Créer un compte</button>

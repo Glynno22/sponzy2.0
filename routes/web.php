@@ -36,7 +36,7 @@ route::get("/compte", [ClientController::class, "compte"]);
 
 Route::get('/signin', [ClientController::class, 'signin']);
 
-Route::get('/acceuil', [ClientController::class, 'acceuil']);
+Route::get('/acceuil', [ClientController::class, 'acceuil'])->name('acceuil')->middleware('auth');
 
 Route::get('/inviter', [ClientController::class, 'inviter']);
 
@@ -67,3 +67,14 @@ Route::get('/moyen_ajouter', [ClientController::class, 'moyen_ajouter']);
 Route::get('/retrait_ajouter', [ClientController::class, 'retrait_ajouter']);
 
 Route::get('/video', [ClientController::class, 'video']);
+
+
+
+
+
+//////////////////////////////////////traitements des donnees\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+Route::post('/register/createUser', [ClientController::class, 'createUser']);
+Route::post('/singnin/conecter', [ClientController::class, 'connexion'])->name('accueil');
+
+

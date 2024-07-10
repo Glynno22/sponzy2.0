@@ -19,26 +19,28 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-6">
-                        <form action="#" method="post" class="form-group">
+                        <form action="{{url('/singnin/conecter')}}" method="post" class="form-group">
+                            @csrf
                             <div class="mb-4">
                                 <div class="form-floating mb-3">
-                                    <input type="number" class="form-control inp" id="floatingInput" placeholder="Numero de telephone">
+                                    <input type="number" name="telephone" class="form-control inp" id="floatingInput" placeholder="Numero de telephone">
                                     <label for="floatingInput">Numero</label>
                                 </div>
                             </div>
                             <div class="mb-4">
                                 <div class="form-floating mb-3">
-                                    <input type="password" class="form-control inp" id="floatingInput" placeholder="Mot de passe">
-                                    <label for="floatingInput">Mot de passe</label>
+                                    <input type="password" name="motpass" class="form-control inp" id="floatingPassword" placeholder="Mot de passe">
+                                    <label for="floatingPassword">Mot de passe</label>
                                 </div>
                             </div>
                             <div class="text-center mb-3">
                                 <div class="d-grid gap-1">
-                                    <input type="button" value="Connexion" class="btn btn-dark rounded-4">                                  </div>                    
-                                  <div class="form-text text-end" id="basic-addon4">Mot de passe oublie ?</div>
+                                    <button type="submit" class="btn btn-dark rounded-4">Connexion</button>
+                                </div>
+                                <div class="form-text text-end" id="basic-addon4">Mot de passe oublié ?</div>
                             </div>
-            
                         </form>
+                        
                     </div>
                 </div>
             </div>
