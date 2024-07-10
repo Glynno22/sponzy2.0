@@ -11,42 +11,6 @@
 </head>
 <body class="@yield('body')">
     
-    <style>
-        .w1{
-            width: 100vw
-        }
-    </style>
-
-    <section class="relative">
-        <div class="grid grid-cols-5 w1 bg-white pt-2 pb-2  fixed bottom-0 left-0 pl-1">
-            
-            <div class="text-center ml-4 mr-5 ">
-                <i class="bi bi-house-door"></i>
-                <p class="text-xs">Accueil</p>
-            </div>
-
-            <div class="text-center ml-4 mr-5 ">
-                <i class="fa-solid fa-list"></i>
-                <p class="text-xs">Entreprise</p>
-            </div>
-
-            <div class="text-center ml-4 mr-5 ">
-                <i class="fa-regular fa-circle-play"></i>
-                <p class="text-xs">Vidéos</p>
-            </div>
-
-            <div class="text-center ml-4 mr-5 ">
-                <i class="fa-solid fa-chart-line"></i>
-                <p class="text-xs">Actif</p>
-            </div>
-
-            <div class="text-center ml-4 mr-5 ">
-                <i class="fa-regular fa-user"></i>
-                <p class="text-xs">Mon</p>
-            </div>
-        </div>
-
-    </section>
 @yield('content')
 
     <script src="https://kit.fontawesome.com/ca056c53d6.js" crossorigin="anonymous"></script>
